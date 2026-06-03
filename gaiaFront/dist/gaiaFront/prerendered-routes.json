@@ -1,0 +1,11 @@
+{
+  "routes": {
+    "/": {},
+    "/configuracion": {},
+    "/dashboard": {},
+    "/financiera": {},
+    "/identificacion-auxilio": {},
+    "/inscripciones": {},
+    "/puntuacion": {}
+  }
+}

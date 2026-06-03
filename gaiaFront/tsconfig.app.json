@@ -6,12 +6,25 @@
     "outDir": "./out-tsc/app",
     "types": [
       "node"
-    ]
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@core/*": ["app/core/*"],
+      "@layout/*": ["app/layout/*"],
+      "@shared/*": ["app/shared/*"],
+      "@features/*": ["app/features/*"]
+    }
   },
   "include": [
     "src/**/*.ts"
   ],
   "exclude": [
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",
+    "src/app/app-routing.module.ts",
+    "src/app/app.module.ts",
+    "src/app/app.component.ts",
+    "src/app/layout/layout.module.ts",
+    "src/app/shared/shared.module.ts"
   ]
 }

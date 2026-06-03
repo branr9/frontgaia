@@ -1,0 +1,21 @@
+<div class="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200" [class.dark]="isDarkMode">
+  <!-- Sidebar -->
+  <app-sidebar 
+    [isCollapsed]="isCollapsed"
+    (toggleCollapse)="toggleCollapse()"
+  ></app-sidebar>
+
+  <!-- Topbar -->
+  <app-topbar 
+    [isDarkMode]="isDarkMode"
+    (toggleTheme)="toggleTheme()"
+  ></app-topbar>
+
+  <!-- Main Content -->
+  <main class="fixed top-16 left-20 right-0 bottom-0 overflow-y-auto transition-all duration-300"
+        [ngClass]="{ 'md:left-64': !isCollapsed, 'md:left-20': isCollapsed }">
+    <div class="p-6 md:p-8 max-w-7xl mx-auto">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
